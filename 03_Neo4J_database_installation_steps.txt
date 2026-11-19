@@ -1,0 +1,29 @@
+Download neo4j zip installable for windows from the development center https://neo4j.com/deployment-center/:
+Direct link: https://go.neo4j.com/download-thanks.html?edition=community&release=2026.10.2&flavour=winzip
+
+Extract the zip to C:\
+
+Copy apoc-<version>-core.jar file from /labs to /plugins folder
+
+Open the command prompt.
+
+cd C:\neo4j-community-2026.10.2
+
+set NEO4J_HOME=C:\neo4j-community-2026.10.2
+
+
+Edit conf/neo4j.conf and add below property:
+dbms.security.procedures.unrestricted=apoc.*
+
+Start neo4j database using:
+%NEO4J_HOME%\bin\neo4j console
+
+Access neo4j console using:
+http://localhost:7474
+
+Enter the password: neo4j (initial password)
+
+Change the password:
+New Password: Zensar@123
+
+Congratulations!!.. You have successfully setup the Neo4J database on local machine..
